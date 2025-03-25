@@ -1,0 +1,352 @@
+2025-03-09T09:54:22.180271+0800 ERROR 无法找到配置文件: G:\config\rag_config.yaml, 错误: [Errno 2] No such file or directory: 'G:\\config\\rag_config.yaml'
+2025-03-09T09:55:43.818310+0800 ERROR 嵌入模型调用失败: No api key provided. You can set by dashscope.api_key = your_api_key in code, or you can set it via environment variable DASHSCOPE_API_KEY= your_api_key. You can store your api key to a file, and use dashscope.api_key_file_path=api_key_file_path in code, or you can set api key file path via environment variable DASHSCOPE_API_KEY_FILE_PATH, You can call save_api_key to api_key_file_path or default path(~/.dashscope/api_key).
+2025-03-09T09:56:11.625076+0800 ERROR 嵌入模型调用失败: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/multimodal-embedding/multimodal-embedding (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))
+2025-03-09T09:56:20.756011+0800 INFO 生成 2 个嵌入向量
+2025-03-12T11:12:43.468310+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:12:54.359787+0800 INFO 生成 2 个向量
+2025-03-12T11:13:12.996437+0800 INFO 生成 1 个向量
+2025-03-12T11:13:12.996437+0800 INFO 生成 1 个向量
+2025-03-12T11:13:12.996437+0800 INFO 向量维度: 1024
+2025-03-12T11:13:12.996437+0800 INFO 向量维度: 1024
+2025-03-12T11:17:28.252222+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:17:28.252222+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:17:28.254736+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:17:28.254736+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:18:55.614503+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:18:55.614503+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:18:55.615606+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:18:55.615606+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:20:32.267595+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:20:32.267595+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:20:32.268604+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:20:32.268604+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:20:55.035564+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:20:55.035564+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:20:55.036652+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:20:55.036652+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:20:55.037654+0800 INFO 加载文本目录: G:\FloodReport\data_ingestion\data\raw\link_texts
+2025-03-12T11:20:55.037654+0800 INFO 加载文本目录: G:\FloodReport\data_ingestion\data\raw\link_texts
+2025-03-12T11:20:55.037654+0800 ERROR 目录 G:\FloodReport\data_ingestion\data\raw\link_texts 不存在
+2025-03-12T11:20:55.037654+0800 ERROR 目录 G:\FloodReport\data_ingestion\data\raw\link_texts 不存在
+2025-03-12T11:22:33.834062+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:22:33.834062+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:22:33.835602+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:22:33.835602+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:22:53.701334+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:22:53.701334+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:22:53.702404+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:22:53.702404+0800 WARNING 无法获取向量维度，使用默认值 1536
+2025-03-12T11:23:14.662746+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:23:14.662746+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:23:14.663757+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:23:14.663757+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:23:36.112603+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:23:36.112603+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:23:36.113613+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:23:36.113613+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:23:36.113613+0800 INFO 加载文本目录: G:\FloodReport\data_ingestion\data\raw\link_texts
+2025-03-12T11:23:36.113613+0800 INFO 加载文本目录: G:\FloodReport\data_ingestion\data\raw\link_texts
+2025-03-12T11:23:36.113613+0800 ERROR 目录 G:\FloodReport\data_ingestion\data\raw\link_texts 不存在
+2025-03-12T11:23:36.113613+0800 ERROR 目录 G:\FloodReport\data_ingestion\data\raw\link_texts 不存在
+2025-03-12T11:24:47.825432+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:24:47.825432+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:24:47.826451+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:24:47.826451+0800 WARNING 无法获取向量维度，使用默认值 1024
+2025-03-12T11:24:47.827456+0800 INFO 加载文本目录: G:\FloodReport\src\data_ingestion\data\raw\link_texts
+2025-03-12T11:24:47.827456+0800 INFO 加载文本目录: G:\FloodReport\src\data_ingestion\data\raw\link_texts
+2025-03-12T11:24:47.828458+0800 INFO 加载 2 个文本文件
+2025-03-12T11:24:47.828458+0800 INFO 加载 2 个文本文件
+2025-03-12T11:24:47.840183+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:24:47.840183+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:24:47.841186+0800 ERROR 无法生成向量，索引构建失败
+2025-03-12T11:24:47.841186+0800 ERROR 无法生成向量，索引构建失败
+2025-03-12T11:24:47.844884+0800 INFO 索引保存到 data/processed/vector_store\vector_index.faiss
+2025-03-12T11:24:47.844884+0800 INFO 索引保存到 data/processed/vector_store\vector_index.faiss
+2025-03-12T11:24:47.854073+0800 INFO 加载索引: 0 个向量
+2025-03-12T11:24:47.854073+0800 INFO 加载索引: 0 个向量
+2025-03-12T11:24:47.865727+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:24:47.865727+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-12T11:24:57.047700+0800 INFO 生成 1 个向量
+2025-03-12T11:24:57.047700+0800 INFO 生成 1 个向量
+2025-03-12T11:24:57.047700+0800 INFO 向量维度: 1024
+2025-03-12T11:24:57.047700+0800 INFO 向量维度: 1024
+2025-03-12T11:24:57.047700+0800 INFO 加载文本目录: G:\FloodReport\src\data_ingestion\data\raw\link_texts
+2025-03-12T11:24:57.047700+0800 INFO 加载文本目录: G:\FloodReport\src\data_ingestion\data\raw\link_texts
+2025-03-12T11:24:57.048721+0800 INFO 加载 2 个文本文件
+2025-03-12T11:24:57.048721+0800 INFO 加载 2 个文本文件
+2025-03-12T11:24:57.388203+0800 INFO 生成 2 个向量
+2025-03-12T11:24:57.388203+0800 INFO 生成 2 个向量
+2025-03-12T11:24:57.388203+0800 INFO 索引构建完成，包含 2 个向量
+2025-03-12T11:24:57.388203+0800 INFO 索引构建完成，包含 2 个向量
+2025-03-12T11:24:57.389221+0800 INFO 索引保存到 data/processed/vector_store\vector_index.faiss
+2025-03-12T11:24:57.389221+0800 INFO 索引保存到 data/processed/vector_store\vector_index.faiss
+2025-03-12T11:24:57.397267+0800 INFO 加载索引: 2 个向量
+2025-03-12T11:24:57.397267+0800 INFO 加载索引: 2 个向量
+2025-03-12T11:24:57.636460+0800 INFO 生成 1 个向量
+2025-03-12T11:24:57.636460+0800 INFO 生成 1 个向量
+2025-03-12T14:34:24.616296+0800 INFO 生成 1 个向量
+2025-03-12T14:34:24.616296+0800 INFO 生成 1 个向量
+2025-03-12T14:34:24.617938+0800 INFO 向量维度: 1024
+2025-03-12T14:34:24.617938+0800 INFO 向量维度: 1024
+2025-03-12T14:34:24.618808+0800 INFO 加载文本目录: G:\FloodReport\src\data_ingestion\data\raw\link_texts
+2025-03-12T14:34:24.618808+0800 INFO 加载文本目录: G:\FloodReport\src\data_ingestion\data\raw\link_texts
+2025-03-12T14:34:24.619810+0800 INFO 加载 2 个文本文件
+2025-03-12T14:34:24.619810+0800 INFO 加载 2 个文本文件
+2025-03-12T14:34:24.920395+0800 INFO 生成 2 个向量
+2025-03-12T14:34:24.920395+0800 INFO 生成 2 个向量
+2025-03-12T14:34:24.921786+0800 INFO 索引构建完成，包含 2 个向量
+2025-03-12T14:34:24.921786+0800 INFO 索引构建完成，包含 2 个向量
+2025-03-12T14:34:24.924805+0800 INFO 索引保存到 data/processed/vector_store\vector_index.faiss
+2025-03-12T14:34:24.924805+0800 INFO 索引保存到 data/processed/vector_store\vector_index.faiss
+2025-03-12T14:34:24.933368+0800 INFO 加载索引: 2 个向量
+2025-03-12T14:34:24.933368+0800 INFO 加载索引: 2 个向量
+2025-03-12T14:34:25.169096+0800 INFO 生成 1 个向量
+2025-03-12T14:34:25.169096+0800 INFO 生成 1 个向量
+2025-03-12T14:54:14.495390+0800 INFO 生成 1 个向量
+2025-03-12T14:54:14.495390+0800 INFO 生成 1 个向量
+2025-03-12T14:54:14.495390+0800 INFO 向量维度: 1024
+2025-03-12T14:54:14.495390+0800 INFO 向量维度: 1024
+2025-03-12T14:54:14.496938+0800 INFO 加载文本目录: G:\FloodReport\data_ingestion\data\raw\link_texts
+2025-03-12T14:54:14.496938+0800 INFO 加载文本目录: G:\FloodReport\data_ingestion\data\raw\link_texts
+2025-03-12T14:54:14.496938+0800 ERROR 目录 G:\FloodReport\data_ingestion\data\raw\link_texts 不存在
+2025-03-12T14:54:14.496938+0800 ERROR 目录 G:\FloodReport\data_ingestion\data\raw\link_texts 不存在
+2025-03-12T14:58:07.592308+0800 INFO 生成 1 个向量
+2025-03-12T14:58:07.592308+0800 INFO 生成 1 个向量
+2025-03-12T14:58:07.593310+0800 INFO 向量维度: 1024
+2025-03-12T14:58:07.593310+0800 INFO 向量维度: 1024
+2025-03-12T14:58:07.593310+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T14:58:07.593310+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T14:58:07.594310+0800 INFO 成功加载 1 个文本文件
+2025-03-12T14:58:07.594310+0800 INFO 成功加载 1 个文本文件
+2025-03-12T14:58:07.921561+0800 INFO 生成 1 个向量
+2025-03-12T14:58:07.921561+0800 INFO 生成 1 个向量
+2025-03-12T14:58:07.922567+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T14:58:07.922567+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T14:58:07.925062+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\knowledge_management\vector_store\vector_index.faiss
+2025-03-12T14:58:07.925062+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\knowledge_management\vector_store\vector_index.faiss
+2025-03-12T14:58:07.933343+0800 INFO 加载索引: 1 个向量
+2025-03-12T14:58:07.933343+0800 INFO 加载索引: 1 个向量
+2025-03-12T14:58:08.228236+0800 INFO 生成 1 个向量
+2025-03-12T14:58:08.228236+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.077760+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.077760+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.078264+0800 INFO 向量维度: 1024
+2025-03-12T15:32:57.078264+0800 INFO 向量维度: 1024
+2025-03-12T15:32:57.078795+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:32:57.078795+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:32:57.079298+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:32:57.079298+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:32:57.348203+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.348203+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.348203+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:32:57.348203+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:32:57.352595+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\knowledge_management\vector_store\vector_index.faiss
+2025-03-12T15:32:57.352595+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\knowledge_management\vector_store\vector_index.faiss
+2025-03-12T15:32:57.364046+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:32:57.364046+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:32:57.585098+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.585098+0800 INFO 生成 1 个向量
+2025-03-12T15:32:57.585603+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:32:57.585603+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:35:43.443731+0800 INFO 生成 1 个向量
+2025-03-12T15:35:43.443731+0800 INFO 生成 1 个向量
+2025-03-12T15:35:43.443731+0800 INFO 向量维度: 1024
+2025-03-12T15:35:43.443731+0800 INFO 向量维度: 1024
+2025-03-12T15:35:43.444734+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:35:43.444734+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:35:43.444734+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:35:43.444734+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:37:05.920349+0800 INFO 生成 1 个向量
+2025-03-12T15:37:05.920349+0800 INFO 生成 1 个向量
+2025-03-12T15:37:05.920349+0800 INFO 向量维度: 1024
+2025-03-12T15:37:05.920349+0800 INFO 向量维度: 1024
+2025-03-12T15:37:05.921604+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:37:05.921604+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:37:05.921604+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:37:05.921604+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:37:06.164683+0800 INFO 生成 1 个向量
+2025-03-12T15:37:06.164683+0800 INFO 生成 1 个向量
+2025-03-12T15:37:06.164683+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:37:06.164683+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:37:06.165683+0800 INFO 索引已保存到指定位置: G:\FloodReport\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:37:06.165683+0800 INFO 索引已保存到指定位置: G:\FloodReport\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:37:06.166718+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:37:06.166718+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:37:06.373366+0800 INFO 生成 1 个向量
+2025-03-12T15:37:06.373366+0800 INFO 生成 1 个向量
+2025-03-12T15:37:06.374370+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:37:06.374370+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:39:40.814017+0800 INFO 生成 1 个向量
+2025-03-12T15:39:40.814017+0800 INFO 生成 1 个向量
+2025-03-12T15:39:40.814017+0800 INFO 向量维度: 1024
+2025-03-12T15:39:40.814017+0800 INFO 向量维度: 1024
+2025-03-12T15:39:40.814521+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw
+2025-03-12T15:39:40.814521+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw
+2025-03-12T15:39:40.814521+0800 INFO 成功加载 0 个文本文件
+2025-03-12T15:39:40.814521+0800 INFO 成功加载 0 个文本文件
+2025-03-12T15:39:40.814521+0800 ERROR 无法构建索引：无文本数据
+2025-03-12T15:39:40.814521+0800 ERROR 无法构建索引：无文本数据
+2025-03-12T15:39:40.815544+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:39:40.815544+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:39:40.822702+0800 INFO 加载索引: 0 个向量
+2025-03-12T15:39:40.822702+0800 INFO 加载索引: 0 个向量
+2025-03-12T15:39:40.822702+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw
+2025-03-12T15:39:40.822702+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw
+2025-03-12T15:39:40.822702+0800 INFO 成功加载 0 个文本文件
+2025-03-12T15:39:40.822702+0800 INFO 成功加载 0 个文本文件
+2025-03-12T15:39:41.109811+0800 INFO 生成 1 个向量
+2025-03-12T15:39:41.109811+0800 INFO 生成 1 个向量
+2025-03-12T15:39:41.109811+0800 DEBUG 搜索结果: 0 个匹配项
+2025-03-12T15:39:41.109811+0800 DEBUG 搜索结果: 0 个匹配项
+2025-03-12T15:39:55.681823+0800 INFO 生成 1 个向量
+2025-03-12T15:39:55.681823+0800 INFO 生成 1 个向量
+2025-03-12T15:39:55.682827+0800 INFO 向量维度: 1024
+2025-03-12T15:39:55.682827+0800 INFO 向量维度: 1024
+2025-03-12T15:39:55.683827+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:39:55.683827+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:39:55.683827+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:39:55.683827+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:39:55.978262+0800 INFO 生成 1 个向量
+2025-03-12T15:39:55.978262+0800 INFO 生成 1 个向量
+2025-03-12T15:39:55.978262+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:39:55.978262+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:39:55.979310+0800 INFO 索引已保存到指定位置: G:\FloodReport\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:39:55.979310+0800 INFO 索引已保存到指定位置: G:\FloodReport\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:39:55.980315+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:39:55.980315+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:39:56.163707+0800 INFO 生成 1 个向量
+2025-03-12T15:39:56.163707+0800 INFO 生成 1 个向量
+2025-03-12T15:39:56.163707+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:39:56.163707+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:41:06.742821+0800 INFO 生成 1 个向量
+2025-03-12T15:41:06.742821+0800 INFO 生成 1 个向量
+2025-03-12T15:41:06.743942+0800 INFO 向量维度: 1024
+2025-03-12T15:41:06.743942+0800 INFO 向量维度: 1024
+2025-03-12T15:41:29.446438+0800 INFO 生成 1 个向量
+2025-03-12T15:41:29.446438+0800 INFO 生成 1 个向量
+2025-03-12T15:41:29.447441+0800 INFO 向量维度: 1024
+2025-03-12T15:41:29.447441+0800 INFO 向量维度: 1024
+2025-03-12T15:41:29.447441+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:41:29.447441+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:41:29.448445+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:41:29.448445+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:41:29.725702+0800 INFO 生成 1 个向量
+2025-03-12T15:41:29.725702+0800 INFO 生成 1 个向量
+2025-03-12T15:41:29.725702+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:41:29.725702+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:41:29.726702+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:41:29.726702+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:41:29.727796+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:41:29.727796+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:41:29.974751+0800 INFO 生成 1 个向量
+2025-03-12T15:41:29.974751+0800 INFO 生成 1 个向量
+2025-03-12T15:41:29.974751+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:41:29.974751+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:45:00.663657+0800 INFO 生成 1 个向量
+2025-03-12T15:45:00.663657+0800 INFO 生成 1 个向量
+2025-03-12T15:45:00.665320+0800 INFO 向量维度: 1024
+2025-03-12T15:45:00.665320+0800 INFO 向量维度: 1024
+2025-03-12T15:45:00.667506+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:45:00.667506+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-12T15:45:00.667506+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:45:00.667506+0800 INFO 成功加载 1 个文本文件
+2025-03-12T15:45:00.899942+0800 INFO 生成 1 个向量
+2025-03-12T15:45:00.899942+0800 INFO 生成 1 个向量
+2025-03-12T15:45:00.900448+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:45:00.900448+0800 INFO 索引构建完成，包含 1 个向量
+2025-03-12T15:45:00.904009+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:45:00.904009+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-12T15:45:00.913886+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:45:00.913886+0800 INFO 加载索引: 1 个向量
+2025-03-12T15:45:01.134502+0800 INFO 生成 1 个向量
+2025-03-12T15:45:01.134502+0800 INFO 生成 1 个向量
+2025-03-12T15:45:01.136437+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-12T15:45:01.136437+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-18T21:50:32.382063+0800 INFO 生成 1 个向量
+2025-03-18T21:50:32.382063+0800 INFO 生成 1 个向量
+2025-03-18T21:50:32.382063+0800 INFO 向量维度: 1024
+2025-03-18T21:50:32.382063+0800 INFO 向量维度: 1024
+2025-03-18T21:50:32.384077+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-18T21:50:32.384077+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-18T21:50:32.385351+0800 INFO 成功加载 2 个文本文件
+2025-03-18T21:50:32.385351+0800 INFO 成功加载 2 个文本文件
+2025-03-18T21:50:32.640804+0800 INFO 生成 2 个向量
+2025-03-18T21:50:32.640804+0800 INFO 生成 2 个向量
+2025-03-18T21:50:32.641809+0800 INFO 索引构建完成，包含 2 个向量
+2025-03-18T21:50:32.641809+0800 INFO 索引构建完成，包含 2 个向量
+2025-03-18T21:50:32.645264+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-18T21:50:32.645264+0800 INFO 索引已保存到指定位置: G:\FloodReport\src\data\processed\vector_store\vector_index.faiss
+2025-03-18T21:50:32.654574+0800 INFO 加载索引: 2 个向量
+2025-03-18T21:50:32.654574+0800 INFO 加载索引: 2 个向量
+2025-03-18T21:50:32.851599+0800 INFO 生成 1 个向量
+2025-03-18T21:50:32.851599+0800 INFO 生成 1 个向量
+2025-03-18T21:50:32.854632+0800 DEBUG 搜索结果: 2 个匹配项
+2025-03-18T21:50:32.854632+0800 DEBUG 搜索结果: 2 个匹配项
+2025-03-24T15:32:32.921674+0800 INFO 生成 1 个向量
+2025-03-24T15:32:32.921674+0800 INFO 生成 1 个向量
+2025-03-24T15:32:32.921674+0800 INFO 向量维度: 1024
+2025-03-24T15:32:32.921674+0800 INFO 向量维度: 1024
+2025-03-24T15:32:32.921674+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-24T15:32:32.921674+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-24T15:32:32.923760+0800 INFO 成功加载 8 个文本文件
+2025-03-24T15:32:32.923760+0800 INFO 成功加载 8 个文本文件
+2025-03-24T15:32:33.394982+0800 INFO 生成 8 个向量
+2025-03-24T15:32:33.394982+0800 INFO 生成 8 个向量
+2025-03-24T15:32:33.394982+0800 INFO 索引构建完成，包含 8 个向量
+2025-03-24T15:32:33.394982+0800 INFO 索引构建完成，包含 8 个向量
+2025-03-24T15:32:33.396034+0800 INFO 索引已保存到指定位置: G:\FloodReport\data/processed/vector_store\vector_index.faiss
+2025-03-24T15:32:33.396034+0800 INFO 索引已保存到指定位置: G:\FloodReport\data/processed/vector_store\vector_index.faiss
+2025-03-24T15:32:33.404205+0800 INFO 加载索引: 8 个向量
+2025-03-24T15:32:33.404205+0800 INFO 加载索引: 8 个向量
+2025-03-24T15:32:33.585410+0800 INFO 生成 1 个向量
+2025-03-24T15:32:33.585410+0800 INFO 生成 1 个向量
+2025-03-24T15:32:33.587420+0800 DEBUG 搜索结果: 5 个匹配项
+2025-03-24T15:32:33.587420+0800 DEBUG 搜索结果: 5 个匹配项
+2025-03-24T17:06:31.224909+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-24T17:06:31.224909+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-24T17:06:31.224909+0800 INFO 向量维度: 1024
+2025-03-24T17:06:31.224909+0800 INFO 向量维度: 1024
+2025-03-24T17:06:31.224909+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-24T17:06:31.224909+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-24T17:06:31.226650+0800 INFO 加载完成，共处理 9 个事件
+2025-03-24T17:06:31.226650+0800 INFO 加载完成，共处理 9 个事件
+2025-03-24T17:06:31.248133+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-24T17:06:31.248133+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-24T17:06:31.248637+0800 ERROR 无法生成向量，索引构建失败
+2025-03-24T17:06:31.248637+0800 ERROR 无法生成向量，索引构建失败
+2025-03-24T17:06:31.249848+0800 INFO 索引已保存到: G:\FloodReport\data/processed/vector_store\vector_index.faiss
+2025-03-24T17:06:31.249848+0800 INFO 索引已保存到: G:\FloodReport\data/processed/vector_store\vector_index.faiss
+2025-03-24T17:06:31.249848+0800 INFO 元数据已保存到: G:\FloodReport\data/processed/vector_store\vector_index_metadata.pkl
+2025-03-24T17:06:31.249848+0800 INFO 元数据已保存到: G:\FloodReport\data/processed/vector_store\vector_index_metadata.pkl
+2025-03-24T17:06:31.258548+0800 INFO 加载索引: 0 个向量
+2025-03-24T17:06:31.258548+0800 INFO 加载索引: 0 个向量
+2025-03-24T17:06:31.266301+0800 INFO 加载元数据: 9 个事件
+2025-03-24T17:06:31.266301+0800 INFO 加载元数据: 9 个事件
+2025-03-24T17:06:31.288858+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-24T17:06:31.288858+0800 ERROR 嵌入模型调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2025-03-24T17:06:31.289362+0800 ERROR 查询向量生成失败
+2025-03-24T17:06:31.289362+0800 ERROR 查询向量生成失败
+2025-03-24T17:06:39.279891+0800 INFO 生成 1 个向量
+2025-03-24T17:06:39.279891+0800 INFO 生成 1 个向量
+2025-03-24T17:06:39.279891+0800 INFO 向量维度: 1024
+2025-03-24T17:06:39.279891+0800 INFO 向量维度: 1024
+2025-03-24T17:06:39.279891+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-24T17:06:39.279891+0800 INFO 加载文本目录: G:\FloodReport\src\data\raw\link_texts
+2025-03-24T17:06:39.281012+0800 INFO 加载完成，共处理 9 个事件
+2025-03-24T17:06:39.281012+0800 INFO 加载完成，共处理 9 个事件
+2025-03-24T17:06:39.689508+0800 INFO 生成 9 个向量
+2025-03-24T17:06:39.689508+0800 INFO 生成 9 个向量
+2025-03-24T17:06:39.689508+0800 INFO 索引构建完成，包含 9 个向量
+2025-03-24T17:06:39.689508+0800 INFO 索引构建完成，包含 9 个向量
+2025-03-24T17:06:39.690511+0800 INFO 索引已保存到: G:\FloodReport\data/processed/vector_store\vector_index.faiss
+2025-03-24T17:06:39.690511+0800 INFO 索引已保存到: G:\FloodReport\data/processed/vector_store\vector_index.faiss
+2025-03-24T17:06:39.691519+0800 INFO 元数据已保存到: G:\FloodReport\data/processed/vector_store\vector_index_metadata.pkl
+2025-03-24T17:06:39.691519+0800 INFO 元数据已保存到: G:\FloodReport\data/processed/vector_store\vector_index_metadata.pkl
+2025-03-24T17:06:39.698458+0800 INFO 加载索引: 9 个向量
+2025-03-24T17:06:39.698458+0800 INFO 加载索引: 9 个向量
+2025-03-24T17:06:39.700543+0800 INFO 加载元数据: 9 个事件
+2025-03-24T17:06:39.700543+0800 INFO 加载元数据: 9 个事件
+2025-03-24T17:06:39.924682+0800 INFO 生成 1 个向量
+2025-03-24T17:06:39.924682+0800 INFO 生成 1 个向量
+2025-03-24T17:06:39.924682+0800 DEBUG 搜索结果: 1 个匹配项
+2025-03-24T17:06:39.924682+0800 DEBUG 搜索结果: 1 个匹配项

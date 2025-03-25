@@ -1,0 +1,27 @@
+model:
+  understanding:  # 新增多模态理解模型
+    provider: "volcengine"
+    api_key_env: "VOLC_ACCESSKEY"
+    secret_key_env: "VOLC_SECRETKEY"
+    model_name: "ep-20250309105703-52v9q"
+  embedding:
+    provider: "aliyun"
+    api_key_env: "DASHSCOPE_API_KEY"
+    model_name: "text-embedding-v3"
+  generation:
+    provider: "volcengine"
+    api_key_env: "VOLC_ACCESSKEY"
+    secret_key_env: "VOLC_SECRETKEY"
+    model_name: "doubao-1.5-pro-32k-250115"
+vector_store:
+  type: "faiss"
+  path: "data/processed/vector_store"
+tos:
+  endpoint: "https://tos-cn-beijing.volces.com"
+  region: "cn-beijing"
+  bucket_name: "floodreport"
+  object_prefix: "images/"
+selenium:
+  chromedriver_path: F:/WebDrivers/chromedriver/chromedriver.exe  # Chrome WebDriver 路径
+  msedgedriver_path: F:/WebDrivers/edgedriver/msedgedriver.exe  # Edge WebDriver 路径
+  browser: edge  # 默认浏览器，可选值：chrome, edge

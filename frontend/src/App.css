@@ -1,0 +1,94 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout {
+  background: #f0f2f5;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ant-layout-header {
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  z-index: 1000;
+  width: 100%;
+}
+
+.ant-layout-sider {
+  box-shadow: 2px 0 8px 0 rgba(29, 35, 41, 0.05);
+  position: fixed;
+  height: 100%;
+  left: 0;
+  z-index: 999;
+}
+
+.ant-layout-content {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 16px;
+  padding: 16px;
+  min-height: calc(100vh - 96px);
+  flex: 1;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    z-index: 100;
+    height: 100%;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+
+  .ant-layout-sider-collapsed {
+    transform: translateX(0);
+  }
+  
+  .ant-layout-content {
+    margin: 8px !important;
+    padding: 12px !important;
+    width: 100% !important;
+  }
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

@@ -1,0 +1,57 @@
+faiss-cpu==1.7.2
+sentence-transformers==2.2.2
+openai==0.27.8
+# 数据采集相关
+requests==2.28.1        # 用于发送 HTTP 请求，调用微博 API
+tweepy==4.10.0         # Twitter API 采集（未来扩展用）
+selenium==4.8.0        # 网页抓取（适用于新闻网站或论坛）
+beautifulsoup4==4.11.1 # 解析 HTML（配合 Selenium 使用）
+
+# 数据处理相关
+pandas==1.5.3          # 数据清洗和结构化处理
+numpy==1.24.2         # 数值计算支持
+
+# NLP 和信息提取
+spacy==3.5.0          # 命名实体识别和文本处理
+transformers==4.26.1  # Hugging Face 的预训练模型（如 BERT）
+torch==1.13.1         # PyTorch，支持模型训练和推理
+jieba==0.42.1         # 中文分词
+
+# OCR（图片处理）
+pytesseract==0.3.10   # Tesseract OCR，用于图片文字提取
+Pillow==9.4.0         # 图像处理（配合 OCR）
+
+# 可视化和报告生成
+matplotlib==3.6.3     # 绘制热力图和词云
+seaborn==0.12.2       # 统计数据可视化
+Jinja2==3.1.2         # 模板渲染，生成报告
+
+# 任务调度和异步处理
+celery==5.2.7         # 任务队列，确保时效性
+redis==4.5.1          # Redis 客户端，作为 Celery 的消息代理
+
+# 数据库和存储
+pymongo==4.3.3        # MongoDB 客户端，存储历史数据
+psycopg2-binary==2.9.5 # PostgreSQL 客户端（可选）
+
+# 地理编码和 GIS
+geopy==2.3.0          # 地理编码支持
+folium==0.14.0        # GIS 可视化（生成热力图）
+
+# 日志和调试
+loguru==0.6.0         # 简单易用的日志记录工具
+
+# 其他工具
+python-dateutil==2.8.2 # 时间处理
+python-dotenv==1.0.0   # 环境变量管理，从.env文件加载变量
+
+# 新增依赖
+dashscope==1.0.0  # 阿里云 DASH Embedding SDK（版本可能需调整）
+Pillow
+volcengine-python-sdk[ark]
+tos
+
+volcengine
+opencv-python
+yt-dlp
+openai-whisper
