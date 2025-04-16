@@ -64,3 +64,34 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* 覆盖 Ant Design 按钮透明度问题 */
+.ant-btn-primary {
+  opacity: 1 !important;
+}
+
+/* 确保登录按钮在所有状态下都有正确的样式 */
+.login-button.ant-btn-primary {
+  background-color: #1677ff !important;
+  border-color: #1677ff !important;
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* 修复透明背景问题 */
+.ant-btn-primary:not([disabled]) {
+  background-color: #1677ff;
+}
+
+/* 按钮在鼠标悬停和点击时的样式 */
+.login-button.ant-btn-primary:hover,
+.login-button.ant-btn-primary:focus {
+  background-color: #4096ff !important;
+  border-color: #4096ff !important;
+  opacity: 1 !important;
+}
+
+.login-button.ant-btn-primary:active {
+  background-color: #0958d9 !important;
+  border-color: #0958d9 !important;
+}

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -9,8 +9,27 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:8000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
+      },
+      '/extract': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/build-index': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/search': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/generate-report': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/system': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
     }
   }
 })

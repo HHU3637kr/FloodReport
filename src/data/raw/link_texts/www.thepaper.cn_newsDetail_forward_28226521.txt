@@ -1,5 +1,0 @@
-结构化数据:
-{'rainfall': [], 'water_condition': [], 'disaster_impact': [], 'measures': [], 'raw_text': ''}
-
-原始标题:
-年年暴雨，年年受灾，城市内涝问题何解_澎湃号·湃客_澎湃新闻-The Paper

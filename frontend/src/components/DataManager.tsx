@@ -1,160 +1,124 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Input, List, message, Spin, Row, Col, Statistic, Space, Tag } from 'antd';
-import { DatabaseOutlined, SearchOutlined } from '@ant-design/icons';
+import { Card, Table, Button, Input, message, Popconfirm } from 'antd';
+import { DatabaseOutlined } from '@ant-design/icons';
 import axios from 'axios';
 
-const { Search } = Input;
-
-interface SearchResult {
-  category: string;
-  event: {
-    time?: string;
-    location?: string;
-    description?: string;
-    [key: string]: any;
-  };
-  distance: number;
-}
-
-interface DataStats {
-  totalDocuments: number;
-  categories: string[];
-  regions: string[];
-}
-
 const DataManager: React.FC = () => {
-  const [query, setQuery] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
-  const [searchLoading, setSearchLoading] = useState<boolean>(false);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [stats, setStats] = useState<DataStats>({
-    totalDocuments: 0,
-    categories: [],
-    regions: []
-  });
+  const [databases, setDatabases] = useState<string[]>([]);
+  const [newDbName, setNewDbName] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchStats = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get('http://localhost:8000/data-stats');
-        if (response.data.status === 'success') {
-          setStats(response.data.data);
-        } else {
-          message.error('获取数据统计信息失败');
+  const fetchDatabases = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get('http://localhost:8000/databases');
+      if (response.data.status === 'success') {
+        setDatabases(response.data.data);
+        if (!response.data.data.includes('default')) {
+          setDatabases(['default', ...response.data.data]);
         }
-      } catch (error) {
-        message.error('获取数据统计失败：' + (error instanceof Error ? error.message : '未知错误'));
-      } finally {
-        setLoading(false);
+      } else {
+        message.error('获取数据库列表失败');
       }
-    };
-    fetchStats();
-  }, []);
+    } catch (error) {
+      message.error('获取数据库列表失败: ' + (error as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  const handleSearch = async () => {
-    if (!query.trim()) {
-      message.warning('请输入搜索关键词');
+  const createDatabase = async () => {
+    if (!newDbName || !newDbName.match(/^[a-zA-Z0-9_]+$/)) {
+      message.warning('请输入有效的数据库名称（仅限字母、数字和下划线）');
       return;
     }
 
-    setSearchLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/search', {
-        query: query,
-        k: 5
-      });
-
+      const response = await axios.post('http://localhost:8000/databases', { db_name: newDbName });
       if (response.data.status === 'success') {
-        setResults(response.data.data || []);
-        if (response.data.data?.length === 0) {
-          message.info('未找到匹配的结果');
-        } else {
-          message.success('搜索完成');
-        }
+        message.success('数据库创建成功');
+        setNewDbName('');
+        fetchDatabases();
       } else {
-        message.error('搜索失败: ' + (response.data.detail || '未知错误'));
-        setResults([]);
+        message.error('创建数据库失败: ' + (response.data.detail || '未知错误'));
       }
     } catch (error) {
-      message.error('搜索失败：' + (error instanceof Error ? error.message : '未知错误'));
-      setResults([]);
-    } finally {
-      setSearchLoading(false);
+      message.error('创建数据库失败: ' + (error as Error).message);
     }
   };
 
+  const deleteDatabase = async (dbName: string) => {
+    if (dbName === 'default') {
+      message.warning('不能删除默认数据库');
+      return;
+    }
+
+    try {
+      const response = await axios.delete(`http://localhost:8000/databases/${dbName}`);
+      if (response.data.status === 'success') {
+        message.success('数据库删除成功');
+        fetchDatabases();
+      } else {
+        message.error('删除数据库失败: ' + (response.data.detail || '未知错误'));
+      }
+    } catch (error) {
+      message.error('删除数据库失败: ' + (error as Error).message);
+    }
+  };
+
+  useEffect(() => {
+    fetchDatabases();
+  }, []);
+
+  const columns = [
+    {
+      title: '数据库名称',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: '操作',
+      key: 'action',
+      render: (_: any, record: { name: string }) => (
+        <Popconfirm
+          title="确定删除此数据库？"
+          onConfirm={() => deleteDatabase(record.name)}
+          okText="确定"
+          cancelText="取消"
+          disabled={record.name === 'default'}
+        >
+          <Button type="link" danger disabled={record.name === 'default'}>
+            删除
+          </Button>
+        </Popconfirm>
+      ),
+    },
+  ];
+
   return (
     <div>
-      <Card title="数据管理" extra={<DatabaseOutlined />}>
-        <Spin spinning={loading}>
-          <Row gutter={16} style={{ marginBottom: '16px' }}>
-            <Col span={8}>
-              <Card size="small">
-                <Statistic title="总文档数" value={stats.totalDocuments} />
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card size="small">
-                <Statistic title="地区覆盖" value={stats.regions.length} suffix="个地区" />
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card size="small">
-                <Statistic title="分类统计" value={stats.categories.length} suffix="个分类" />
-              </Card>
-            </Col>
-          </Row>
-        </Spin>
-
-        <Search
-          placeholder="输入关键词搜索相似文本"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onSearch={handleSearch}
-          enterButton={<><SearchOutlined /> 搜索</>}
-          loading={searchLoading}
-          style={{ marginBottom: '16px' }}
-        />
-
-        {searchLoading && (
-          <div style={{ textAlign: 'center', margin: '20px 0' }}>
-            <Spin tip="正在搜索..." />
-          </div>
-        )}
-
-        {results.length > 0 && (
-          <List
-            style={{ marginTop: '20px' }}
-            header={<div>搜索结果</div>}
-            bordered
-            dataSource={results}
-            renderItem={(item) => (
-              <List.Item>
-                <List.Item.Meta
-                  title={
-                    <Space>
-                      <span>相似度：{(item.distance * 100).toFixed(2)}%</span>
-                      <Tag color="blue">{item.category}</Tag>
-                      {item.event.location && <Tag color="green">{item.event.location}</Tag>}
-                    </Space>
-                  }
-                  description={
-                    <div style={{ whiteSpace: 'pre-wrap' }}>
-                      {item.event.time && <p>时间：{item.event.time}</p>}
-                      {item.event.description && <p>描述：{item.event.description}</p>}
-                      {Object.entries(item.event)
-                        .filter(([key]) => !['time', 'location', 'description'].includes(key))
-                        .map(([key, value]) => (
-                          <p key={key}>{key}：{value}</p>
-                        ))}
-                    </div>
-                  }
-                />
-              </List.Item>
-            )}
+      <Card title="创建数据库" extra={<DatabaseOutlined />}>
+        <div style={{ marginBottom: 16 }}>
+          <Input
+            placeholder="输入新数据库名称"
+            value={newDbName}
+            onChange={(e) => setNewDbName(e.target.value)}
+            style={{ width: 200, marginRight: 8 }}
+            onPressEnter={createDatabase}
           />
-        )}
+          <Button type="primary" onClick={createDatabase}>
+            创建数据库
+          </Button>
+        </div>
+        <Table
+          columns={columns}
+          dataSource={databases.map((db) => ({ key: db, name: db }))}
+          loading={loading}
+          pagination={false}
+          locale={{
+            emptyText: '暂无数据库，请创建一个新数据库！'
+          }}
+        />
       </Card>
     </div>
   );

@@ -1,5 +1,0 @@
-结构化数据:
-{'rainfall': [], 'water_condition': [], 'disaster_impact': [], 'measures': [], 'raw_text': ''}
-
-原始标题:
-404 æ¨è®¿é®çé¡µé¢æ¾ä¸å°äº_è¾è®¯ç½

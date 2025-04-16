@@ -3012,3 +3012,63 @@ water_condition 相关事件:
 2025-03-24T17:38:59.848317+0800 INFO 报告已保存至: G:\FloodReport\src\data\reports\澳洲汛情_report_20250324.md
 2025-03-24T17:38:59.848317+0800 INFO 报告已保存至: G:\FloodReport\src\data\reports\澳洲汛情_report_20250324.md
 2025-03-24T17:38:59.848317+0800 INFO 报告已保存至: G:\FloodReport\src\data\reports\澳洲汛情_report_20250324.md
+2025-03-26T15:44:29.253195+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:29.253195+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:29.253195+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:29.253195+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:29.513610+0800 INFO 生成 1 个向量
+2025-03-26T15:44:29.513610+0800 INFO 生成 1 个向量
+2025-03-26T15:44:29.513610+0800 INFO 生成 1 个向量
+2025-03-26T15:44:29.513610+0800 INFO 生成 1 个向量
+2025-03-26T15:44:29.513610+0800 INFO 向量维度: 1024
+2025-03-26T15:44:29.513610+0800 INFO 向量维度: 1024
+2025-03-26T15:44:29.513610+0800 INFO 向量维度: 1024
+2025-03-26T15:44:29.513610+0800 INFO 向量维度: 1024
+2025-03-26T15:44:29.516992+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:29.516992+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:29.516992+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:29.516992+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:29.518497+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:29.518497+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:29.518497+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:29.518497+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:32.914812+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:32.914812+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:32.914812+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:32.914812+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-26T15:44:33.189724+0800 INFO 生成 1 个向量
+2025-03-26T15:44:33.189724+0800 INFO 生成 1 个向量
+2025-03-26T15:44:33.189724+0800 INFO 生成 1 个向量
+2025-03-26T15:44:33.189724+0800 INFO 生成 1 个向量
+2025-03-26T15:44:33.189724+0800 INFO 向量维度: 1024
+2025-03-26T15:44:33.189724+0800 INFO 向量维度: 1024
+2025-03-26T15:44:33.189724+0800 INFO 向量维度: 1024
+2025-03-26T15:44:33.189724+0800 INFO 向量维度: 1024
+2025-03-26T15:44:33.190727+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:33.190727+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:33.190727+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:33.190727+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-26T15:44:33.190727+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:33.190727+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:33.190727+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-26T15:44:33.190727+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-28T19:09:21.524966+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-28T19:09:21.524966+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-28T19:09:21.524966+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-28T19:09:21.524966+0800 INFO 生成洪水报告，查询: 淮安市汛情, 数据库: default
+2025-03-28T19:09:21.775271+0800 INFO 生成 1 个向量
+2025-03-28T19:09:21.775271+0800 INFO 生成 1 个向量
+2025-03-28T19:09:21.775271+0800 INFO 生成 1 个向量
+2025-03-28T19:09:21.775271+0800 INFO 生成 1 个向量
+2025-03-28T19:09:21.775271+0800 INFO 向量维度: 1024
+2025-03-28T19:09:21.775271+0800 INFO 向量维度: 1024
+2025-03-28T19:09:21.775271+0800 INFO 向量维度: 1024
+2025-03-28T19:09:21.775271+0800 INFO 向量维度: 1024
+2025-03-28T19:09:21.776276+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-28T19:09:21.776276+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-28T19:09:21.776276+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-28T19:09:21.776276+0800 WARNING 索引文件 G:\FloodReport\data/processed/vector_store\default\vector_index_default.faiss 不存在
+2025-03-28T19:09:21.776276+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-28T19:09:21.776276+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-28T19:09:21.776276+0800 WARNING 数据库 default 的索引为空或未加载
+2025-03-28T19:09:21.776276+0800 WARNING 数据库 default 的索引为空或未加载

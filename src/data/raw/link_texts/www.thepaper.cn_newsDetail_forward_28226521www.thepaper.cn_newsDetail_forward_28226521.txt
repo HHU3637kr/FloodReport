@@ -1,5 +1,0 @@
-结构化数据:
-{'rainfall': [], 'water_condition': [], 'disaster_impact': [], 'measures': [], 'raw_text': ''}
-
-原始标题:
-澎湃新闻-专注时政与思想-ThePaper.cn

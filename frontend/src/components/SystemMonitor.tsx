@@ -1,26 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Statistic, Timeline, Alert, Progress, Space, Spin } from 'antd';
-import { CheckCircleOutlined, SyncOutlined, ClockCircleOutlined, FileTextOutlined, ReloadOutlined } from '@ant-design/icons';
+import { Card, Row, Col, Statistic, Timeline, Alert, Progress, Space, Spin, Tag, Descriptions } from 'antd';
+import { CheckCircleOutlined, SyncOutlined, ClockCircleOutlined, FileTextOutlined, ReloadOutlined, DesktopOutlined } from '@ant-design/icons';
 import axios from 'axios';
 
+interface SystemInfo {
+  os: string;
+  version: string;
+  architecture: string;
+}
+
 interface SystemStats {
-  processedLinks: number;
-  totalLinks: number;
-  vectorCount: number;
-  reportCount: number;
-  systemLoad: number;
-  isIndexing: boolean;
+  knowledgeBaseCount: number;
+  textCount: number;
+  systemInfo: SystemInfo;
   lastUpdate: string;
 }
 
 const SystemMonitor: React.FC = () => {
   const [stats, setStats] = useState<SystemStats>({
-    processedLinks: 0,
-    totalLinks: 0,
-    vectorCount: 0,
-    reportCount: 0,
-    systemLoad: 0,
-    isIndexing: false,
+    knowledgeBaseCount: 0,
+    textCount: 0,
+    systemInfo: {
+      os: '',
+      version: '',
+      architecture: ''
+    },
     lastUpdate: new Date().toLocaleString()
   });
 
@@ -32,7 +36,7 @@ const SystemMonitor: React.FC = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get('http://localhost:8000/system-status');
+      const response = await axios.get('/system/system-status');
       if (response.data.status === 'success') {
         setStats(response.data.stats);
         setLogs(response.data.logs || []);
@@ -51,8 +55,6 @@ const SystemMonitor: React.FC = () => {
     const interval = setInterval(fetchSystemStatus, 30000);
     return () => clearInterval(interval);
   }, []);
-
-  const progressPercent = Math.round((stats.processedLinks / Math.max(stats.totalLinks, 1)) * 100);
 
   return (
     <div>
@@ -77,58 +79,35 @@ const SystemMonitor: React.FC = () => {
           )}
 
           <Row gutter={16}>
-            <Col span={6}>
+            <Col span={12}>
               <Card>
                 <Statistic
-                  title="已处理链接"
-                  value={stats.processedLinks}
-                  suffix={`/${stats.totalLinks}`}
+                  title="知识库数量"
+                  value={stats.knowledgeBaseCount}
                   prefix={<CheckCircleOutlined />}
                 />
-                <Progress
-                  percent={progressPercent}
-                  size="small"
-                  status={progressPercent === 100 ? 'success' : 'active'}
-                  style={{ marginTop: '8px' }}
-                />
               </Card>
             </Col>
-            <Col span={6}>
+            <Col span={12}>
               <Card>
                 <Statistic
-                  title="向量数据量"
-                  value={stats.vectorCount}
-                  prefix={<SyncOutlined spin={stats.isIndexing} />}
-                  suffix={stats.isIndexing ? '更新中' : '已同步'}
-                />
-              </Card>
-            </Col>
-            <Col span={6}>
-              <Card>
-                <Statistic
-                  title="生成报告数"
-                  value={stats.reportCount}
+                  title="文本数据量"
+                  value={stats.textCount}
                   prefix={<FileTextOutlined />}
                 />
               </Card>
             </Col>
-            <Col span={6}>
-              <Card>
-                <Statistic
-                  title="系统负载"
-                  value={stats.systemLoad}
-                  suffix="%"
-                  valueStyle={{ color: stats.systemLoad > 80 ? '#cf1322' : (stats.systemLoad > 50 ? '#faad14' : '#3f8600') }}
-                />
-                <Progress 
-                  percent={stats.systemLoad} 
-                  size="small"
-                  status={stats.systemLoad > 80 ? 'exception' : (stats.systemLoad > 50 ? 'normal' : 'success')}
-                  style={{ marginTop: '8px' }}
-                />
-              </Card>
-            </Col>
           </Row>
+
+          <Card style={{ marginTop: '20px' }}>
+            <Descriptions title="系统信息" bordered>
+              <Descriptions.Item label="操作系统" span={3}>
+                <Tag color="blue" icon={<DesktopOutlined />}>
+                  {stats.systemInfo.os} {stats.systemInfo.version} ({stats.systemInfo.architecture})
+                </Tag>
+              </Descriptions.Item>
+            </Descriptions>
+          </Card>
 
           <Card style={{ marginTop: '20px' }}>
             <Alert

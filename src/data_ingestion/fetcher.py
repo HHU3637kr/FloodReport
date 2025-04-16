@@ -18,12 +18,26 @@ logger.add("logs/rag_process.log", rotation="1 MB", format="{time} {level} {mess
 def get_webdriver(browser=config['selenium']['browser'], 
                   chromedriver_path=config['selenium']['chromedriver_path'], 
                   msedgedriver_path=config['selenium']['msedgedriver_path']):
-    """根据浏览器类型返回 WebDriver 实例"""
+    """
+    根据浏览器类型返回配置好的 WebDriver 实例
+    
+    Args:
+        browser (str): 浏览器类型，支持 'chrome' 或 'edge'
+        chromedriver_path (str): Chrome WebDriver 可执行文件路径
+        msedgedriver_path (str): Edge WebDriver 可执行文件路径
+        
+    Returns:
+        WebDriver: 配置好的浏览器驱动实例
+        
+    Raises:
+        ValueError: 当指定了不支持的浏览器类型时
+        Exception: 初始化 WebDriver 失败时
+    """
     if browser.lower() == 'chrome':
         options = ChromeOptions()
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--headless")  # 无头模式，不显示浏览器窗口
+        options.add_argument("--no-sandbox")  # 禁用沙盒模式，提高稳定性
+        options.add_argument("--disable-dev-shm-usage")  # 禁用/dev/shm，防止内存不足错误
         service = ChromeService(chromedriver_path)
         try:
             driver = webdriver.Chrome(service=service, options=options)
@@ -47,7 +61,18 @@ def get_webdriver(browser=config['selenium']['browser'],
         raise ValueError(f"Unsupported browser: {browser}. Use 'chrome' or 'edge'.")
 
 def extract_video_urls(url, soup):
-    """提取网页中的视频链接"""
+    """
+    提取网页中的视频链接
+    
+    通过分析不同的视频标签和平台特征，提取网页中的所有视频资源URL
+    
+    Args:
+        url (str): 原始网页URL
+        soup (BeautifulSoup): 网页解析后的BeautifulSoup对象
+        
+    Returns:
+        list: 提取到的视频URL列表
+    """
     video_urls = []
     # 提取 <video> 标签
     video_urls.extend([video['src'] for video in soup.find_all('video', src=True) if video['src'].startswith('http')])
@@ -85,10 +110,25 @@ def extract_video_urls(url, soup):
     bv_matches = re.findall(bv_pattern, str(soup))
     video_urls.extend(bv_matches)
     
-    return list(set(video_urls))
+    return list(set(video_urls))  # 去重返回
 
 def fetch_content(url):
-    """从链接提取文本和媒体信息"""
+    """
+    从URL提取文本和媒体信息
+    
+    综合使用静态请求和动态加载技术，提取网页中的文本、标题、图片和视频链接
+    
+    Args:
+        url (str): 要抓取的网页URL
+        
+    Returns:
+        dict: 包含提取内容的字典，包括以下字段：
+            - text (str): 提取的文本内容
+            - title (str): 网页标题
+            - url (str): 原始URL
+            - image_urls (list): 图片URL列表
+            - video_urls (list): 视频URL列表
+    """
     logger.info(f"开始抓取内容: {url}")
     
     # 初始化返回数据，确保所有字段都有默认值
@@ -106,6 +146,7 @@ def fetch_content(url):
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
         
+        # 检查内容类型，确保是HTML
         content_type = response.headers.get('Content-Type', '')
         if 'text/html' not in content_type and 'application/xhtml+xml' not in content_type:
             logger.warning(f"非HTML内容: {content_type}, URL: {url}")
@@ -115,7 +156,7 @@ def fetch_content(url):
         result['title'] = soup.title.string.strip() if soup.title else "无标题"
         logger.info(f"标题: {result['title']}")
         
-        # 提取文本
+        # 提取文本 - 根据不同网站使用不同的选择器
         if 'news.qq.com' in url:
             article_divs = soup.select('.content-article')
             if article_divs:
@@ -125,6 +166,7 @@ def fetch_content(url):
             if article_divs:
                 result['text'] = ' '.join(div.get_text(strip=True) for div in article_divs)
         else:
+            # 尝试找到主要内容区域
             main_content = None
             for selector in ['article', '.article', '.post', '.content', 'main', '#content', '#main']:
                 elements = soup.select(selector)
@@ -134,6 +176,7 @@ def fetch_content(url):
             if main_content:
                 result['text'] = ' '.join(p.get_text(strip=True) for p in main_content.find_all('p') if p.get_text(strip=True))
             else:
+                # 如果找不到主要内容区域，提取所有段落文本
                 result['text'] = ' '.join(p.get_text(strip=True) for p in soup.find_all('p') if p.get_text(strip=True))
         
         # 静态提取图片和视频
@@ -146,10 +189,11 @@ def fetch_content(url):
         result['text'] = dynamic_result['text'] if dynamic_result['text'] else result['text']
         result['image_urls'].extend(dynamic_result['image_urls'])
         result['video_urls'].extend(dynamic_result['video_urls'])
-        result['image_urls'] = list(set(result['image_urls']))
-        result['video_urls'] = list(set(result['video_urls']))
+        result['image_urls'] = list(set(result['image_urls']))  # 去重
+        result['video_urls'] = list(set(result['video_urls']))  # 去重
         
         if not result['text']:
+            # 如果仍然没有提取到文本，获取整个页面的文本
             result['text'] = soup.get_text(strip=True)
         
         logger.debug(f"提取网页文本: {result['text'][:100]}...")
@@ -162,11 +206,24 @@ def fetch_content(url):
         return result
 
 def _fetch_dynamic_content(url, static_soup, result):
-    """使用 Selenium 动态加载内容"""
+    """
+    使用 Selenium 动态加载网页内容
+    
+    通过模拟浏览器行为加载JS渲染的内容，处理懒加载媒体资源
+    
+    Args:
+        url (str): 要动态加载的URL
+        static_soup (BeautifulSoup): 静态加载的BeautifulSoup对象
+        result (dict): 包含已提取内容的字典
+        
+    Returns:
+        dict: 更新后的内容字典
+    """
     driver = None
     try:
         driver = get_webdriver()
         driver.get(url)
+        # 等待页面加载完成
         WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         # 多次滚动以触发懒加载
         for _ in range(3):
@@ -175,7 +232,7 @@ def _fetch_dynamic_content(url, static_soup, result):
         
         dynamic_soup = BeautifulSoup(driver.page_source, 'html.parser')
         
-        # 提取文本
+        # 提取文本 - 和静态加载类似，但使用动态加载的页面源码
         if 'news.qq.com' in url:
             article_divs = dynamic_soup.select('.content-article')
             if article_divs:
@@ -204,10 +261,13 @@ def _fetch_dynamic_content(url, static_soup, result):
         iframes = dynamic_soup.find_all('iframe')
         for iframe in iframes:
             try:
+                # 切换到iframe内部
                 driver.switch_to.frame(iframe)
                 iframe_soup = BeautifulSoup(driver.page_source, 'html.parser')
+                # 提取iframe中的图片和视频
                 result['image_urls'].extend([img['src'] for img in iframe_soup.find_all('img', src=True) if img['src'].startswith('http')])
                 result['video_urls'].extend(extract_video_urls(url, iframe_soup))
+                # 切回主文档
                 driver.switch_to.default_content()
             except Exception as e:
                 logger.error(f"处理 iframe 失败: {e}")
