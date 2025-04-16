@@ -1,0 +1,17 @@
+# 敏感配置文件
+.env
+config/credentials.yml
+*.key
+
+# 日志文件
+*.log
+logs/
+
+# 编译生成文件
+/build/
+/target/
+*.class
+
+# IDE配置
+.idea/
+.vscode/
