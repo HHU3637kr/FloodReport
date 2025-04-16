@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2023-10-01T00:00:00.000Z">
+  <diagram id="architecture" name="System Architecture">
+    <mxGraphModel dx="1022" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="防汛应急报告生成系统 - 架构图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="175" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 前端层 -->
+        <mxCell id="frontendLayer" value="前端层 (Frontend)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="650" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- 前端组件 -->
+        <mxCell id="knowledgeBaseComponent" value="知识库管理&lt;br&gt;(KnowledgeBase.tsx)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="frontendLayer">
+          <mxGeometry x="40" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="reportViewerComponent" value="报告查看器&lt;br&gt;(ReportViewer.tsx)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="frontendLayer">
+          <mxGeometry x="200" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="systemMonitorComponent" value="系统监控&lt;br&gt;(SystemMonitor.tsx)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="frontendLayer">
+          <mxGeometry x="360" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="loginComponent" value="用户认证&lt;br&gt;(Login.tsx)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="frontendLayer">
+          <mxGeometry x="520" y="60" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API层 -->
+        <mxCell id="apiLayer" value="API层 (Backend API)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="280" width="650" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- API组件 -->
+        <mxCell id="knowledgeBaseApi" value="知识库API&lt;br&gt;(knowledge_base_router.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="apiLayer">
+          <mxGeometry x="40" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="reportApi" value="报告管理API&lt;br&gt;(report_router.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="apiLayer">
+          <mxGeometry x="200" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="authApi" value="用户认证API&lt;br&gt;(auth_router.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="apiLayer">
+          <mxGeometry x="360" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="systemApi" value="系统状态API&lt;br&gt;(system_router.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="apiLayer">
+          <mxGeometry x="520" y="60" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 服务层 -->
+        <mxCell id="serviceLayer" value="服务层 (Service Layer)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="480" width="650" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- 服务组件 -->
+        <mxCell id="ragService" value="报告生成服务&lt;br&gt;(rag_generator.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="serviceLayer">
+          <mxGeometry x="40" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="knowledgeBaseService" value="知识库管理服务&lt;br&gt;(knowledge_base.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="serviceLayer">
+          <mxGeometry x="200" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="userService" value="用户管理服务&lt;br&gt;(user_utils.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="serviceLayer">
+          <mxGeometry x="360" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="llmClientService" value="LLM客户端&lt;br&gt;(llm_client.py)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="serviceLayer">
+          <mxGeometry x="520" y="60" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 数据层 -->
+        <mxCell id="dataLayer" value="数据层 (Data Layer)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="680" width="650" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- 数据组件 -->
+        <mxCell id="knowledgeBaseStorage" value="知识库存储&lt;br&gt;(/data/knowledge_bases)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dataLayer">
+          <mxGeometry x="55" y="50" width="110" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="userStorage" value="用户数据&lt;br&gt;(/data/users)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dataLayer">
+          <mxGeometry x="215" y="50" width="110" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="reportStorage" value="报告数据&lt;br&gt;(/data/reports)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dataLayer">
+          <mxGeometry x="375" y="50" width="110" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="logStorage" value="日志数据&lt;br&gt;(/logs)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dataLayer">
+          <mxGeometry x="515" y="50" width="110" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接前端到API层 -->
+        <mxCell id="frontendToApi1" value="HTTP请求" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="knowledgeBaseComponent" target="knowledgeBaseApi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontendToApi2" value="HTTP请求" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="reportViewerComponent" target="reportApi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontendToApi3" value="HTTP请求" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="systemMonitorComponent" target="systemApi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontendToApi4" value="HTTP请求" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="loginComponent" target="authApi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接API层到服务层 -->
+        <mxCell id="apiToService1" value="功能调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="knowledgeBaseApi" target="knowledgeBaseService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="apiToService2" value="功能调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="reportApi" target="ragService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="apiToService3" value="功能调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="authApi" target="userService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接服务层到数据层 -->
+        <mxCell id="serviceToData1" value="数据读写" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="knowledgeBaseService" target="knowledgeBaseStorage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="serviceToData2" value="数据读写" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="userService" target="userStorage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="serviceToData3" value="数据读写" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="ragService" target="reportStorage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

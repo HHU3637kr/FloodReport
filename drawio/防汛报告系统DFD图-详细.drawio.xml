@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0" version="26.2.12">
+  <diagram id="FloodReportDetailedDFD" name="详细数据流图">
+    <mxGraphModel dx="2074" dy="1112" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- 用户和角色 -->
+        <mxCell id="2" value="普通用户" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="279" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="管理员" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="100" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 用户流程 -->
+        <mxCell id="4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="2" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="输入问题描述" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="129" y="279" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="8" target="17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="登录系统" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="129" y="142" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 系统接口 -->
+        <mxCell id="9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="6" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="12" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="12" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Web前端/API" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="272" y="279" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="显示生成的报告" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="129" y="416" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="查看历史报告" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="129" y="553" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="15" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="13" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="选择报告模板" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="272" y="416" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="验证用户身份" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="272" y="142" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 数据存储 -->
+        <mxCell id="18" value="用户数据库" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=16;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="262" y="50" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="知识库" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=16;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="548" y="167" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="报告数据库" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=16;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="406" y="686" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 数据连接 -->
+        <mxCell id="21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;dashed=1;" edge="1" parent="1" source="17" target="18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="16" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="14" target="24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="查询历史报告" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="272" y="553" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="25" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="24" target="20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 系统流程 -->
+        <mxCell id="26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="12" target="27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="提交报告请求" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="416" y="279" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="28" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="27" target="29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="检索相关知识" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="558" y="279" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="30" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="29" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="31" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="29" target="32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="调用大型语言模型" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="558" y="416" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="33" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="32" target="34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="大型语言模型" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="724" y="416" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="35" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="34" target="36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="生成报告内容" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="558" y="553" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="37" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="36" target="38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="格式化报告" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="416" y="553" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="39" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="38" target="40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="保存报告" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="416" y="416" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="41" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="40" target="20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="42" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="40" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 管理员功能 -->
+        <mxCell id="43" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="3" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="44" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="3" target="45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="管理知识库" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="129" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="46" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="45" target="47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="上传知识资料" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="272" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="48" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="47" target="49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="处理知识资料" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="416" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="50" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="49" target="51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="存入知识库" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="558" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="52" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="51" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 系统监控 -->
+        <mxCell id="53" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;jumpStyle=arc;" edge="1" parent="1" source="3" target="54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="监控系统状态" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="0" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="防汛应急报告系统 - 详细数据流图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="262" y="750" width="339" height="37" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

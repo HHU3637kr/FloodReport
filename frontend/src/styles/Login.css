@@ -1,0 +1,105 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f7f9fc;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.login-card {
+  width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.login-logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.login-form {
+  margin-top: 24px;
+}
+
+/* 登录表单输入框样式 */
+.login-form .ant-input-affix-wrapper {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+.login-form .ant-input-affix-wrapper:hover {
+  border-color: #40a9ff;
+}
+
+.login-form .ant-input-affix-wrapper-focused {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.login-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* 登录按钮样式 */
+.login-button {
+  background-color: #1677ff !important;
+  border-color: #1677ff !important;
+  color: white !important;
+  font-weight: 500;
+  height: 40px;
+  border-radius: 4px;
+  opacity: 1 !important;
+}
+
+.login-button:hover {
+  background-color: #4096ff !important;
+  border-color: #4096ff !important;
+}
+
+.login-button:active {
+  background-color: #0958d9 !important;
+  border-color: #0958d9 !important;
+}
+
+/* 加载状态的按钮 */
+.login-button.ant-btn-loading {
+  background-color: #1677ff !important;
+  opacity: 0.8 !important;
+}
+
+/* 暗黑模式 */
+.dark-theme .login-container {
+  background: #1e1e1e;
+  background-image: linear-gradient(135deg, #1e1e1e 0%, #2d3748 100%);
+}
+
+.dark-theme .login-card {
+  background: #232323;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .login-form .ant-input-affix-wrapper {
+  background-color: #333;
+  border-color: #444;
+}
+
+.dark-theme .login-form .ant-input {
+  background-color: #333;
+  color: #f0f0f0;
+} 
