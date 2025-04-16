@@ -37,7 +37,7 @@
 
 1. 克隆代码库
 ```bash
-git clone https://github.com/yourusername/FloodReport.git
+git clone https://github.com/HHU3637kr/FloodReport.git
 cd FloodReport
 ```
 
